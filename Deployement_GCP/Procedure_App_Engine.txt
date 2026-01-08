@@ -1,0 +1,116 @@
+Microsoft Windows [Version 10.0.26100.7462]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\mojayara>cd C:\Users\mojayara\deployment_gcp\ckdHope-APP Engine-GCP
+
+C:\Users\mojayara\deployment_gcp\ckdHope-APP Engine-GCP>gcloud init
+Welcome! This command will take you through the configuration of gcloud.
+
+Settings from your current configuration [default] are:
+accessibility:
+  screen_reader: 'False'
+core:
+  account: jmohan2787@gmail.com
+  disable_usage_reporting: 'True'
+  project: copper-array-483703-s1
+
+Pick configuration to use:
+ [1] Re-initialize this configuration [default] with new settings
+ [2] Create a new configuration
+Please enter your numeric choice:  1
+
+Your current configuration has been set to: [default]
+
+You can skip diagnostics next time by using the following flag:
+  gcloud init --skip-diagnostics
+
+Network diagnostic detects and fixes local network connection issues.
+Checking network connection...done.
+Reachability Check passed.
+Network diagnostic passed (1/1 checks passed).
+
+Choose the account you want to use for this configuration.
+To use a federated user account, exit this command and sign in to the gcloud CLI with your login configuration file,
+then run this command again.
+
+Select an account:
+ [1] jmohan2787@gmail.com
+ [2] Sign in with a new Google Account
+ [3] Skip this step
+Please enter your numeric choice:  1
+
+You are signed in as: [jmohan2787@gmail.com].
+
+Pick cloud project to use:
+ [1] charged-kiln-483703-q4
+ [2] chatboxhopai
+ [3] ckdapp-483606
+ [4] copper-array-483703-s1
+ [5] cosmic-anthem-481504-q5
+ [6] gen-lang-client-0649223837
+ [7] gen-lang-client-0894277145
+ [8] maximal-shadow-454306-j3
+ [9] melodic-courier-483703-v4
+ [10] pelagic-fin-483607-m6
+ [11] Enter a project ID
+ [12] Create a new project
+Please enter numeric choice or text value (must exactly match list item):  4
+
+Your current project has been set to: [copper-array-483703-s1].
+
+Not setting default zone/region (this feature makes it easier to use
+[gcloud compute] by setting an appropriate default value for the
+--zone and --region flag).
+See https://cloud.google.com/compute/docs/gcloud-compute section on how to set
+default compute region and zone manually. If you would like [gcloud init] to be
+able to do this for you the next time you run it, make sure the
+Compute Engine API is enabled for your project on the
+https://console.developers.google.com/apis page.
+
+The Google Cloud CLI is configured and ready to use!
+
+* Commands that require authentication will use jmohan2787@gmail.com by default
+* Commands will reference project `copper-array-483703-s1` by default
+Run `gcloud help config` to learn how to change individual settings
+
+This gcloud configuration is called [default]. You can create additional configurations if you work with multiple accounts and/or projects.
+Run `gcloud topic configurations` to learn more.
+
+Some things to try next:
+
+* Run `gcloud --help` to see the Cloud Platform services you can interact with. And run `gcloud help COMMAND` to get help on any gcloud command.
+* Run `gcloud topic --help` to learn about advanced features of the CLI like arg files and output formatting
+* Run `gcloud cheat-sheet` to see a roster of go-to `gcloud` commands.
+
+C:\Users\mojayara\deployment_gcp\ckdHope-APP Engine-GCP>gcloud app deploy
+WARNING: You might be using automatic scaling for a standard environment deployment, without providing a value for automatic_scaling.max_instances. Starting from March, 2025, App Engine sets the automatic scaling maximum instances default for standard environment deployments to 20. This change doesn't impact existing apps. To override the default, specify the new max_instances value in your app.yaml file, and deploy a new version or redeploy over an existing version. For details on max_instances, see https://cloud.google.com/appengine/docs/standard/reference/app-yaml.md#scaling_elements.
+
+Services to deploy:
+
+descriptor:                  [C:\Users\mojayara\deployment_gcp\ckdHope-APP Engine-GCP\app.yaml]
+source:                      [C:\Users\mojayara\deployment_gcp\ckdHope-APP Engine-GCP]
+target project:              [copper-array-483703-s1]
+target service:              [default]
+target version:              [20260108t093750]
+target url:                  [https://copper-array-483703-s1.et.r.appspot.com]
+target service account:      [copper-array-483703-s1@appspot.gserviceaccount.com]
+
+
+Do you want to continue (Y/n)?  y
+
+Beginning deployment of service [default]...
+#============================================================#
+#= Uploading 2 files to Google Cloud Storage                =#
+#============================================================#
+File upload done.
+Waiting for operation [apps/copper-array-483703-s1/operations/8a14f140-95e8-4960-840d-0eed22adc176] to complete...done.
+Setting traffic split for service [default]...done.
+Deployed service [default] to [https://copper-array-483703-s1.et.r.appspot.com]
+
+You can stream logs from the command line by running:
+  $ gcloud app logs tail -s default
+
+To view your application in the web browser run:
+  $ gcloud app browse
+
+C:\Users\mojayara\deployment_gcp\ckdHope-APP Engine-GCP>
